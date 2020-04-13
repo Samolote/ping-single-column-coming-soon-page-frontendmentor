@@ -64,21 +64,21 @@ html {
 	padding: 1rem 2rem;
 	border: 1px solid var(--gray);
 	border-radius: 50px;
-	/* transition: border-color var(--default-transition); */
+	transition: border-color var(--default-transition);
 }
 
 .form__input::placeholder {
 	color: var(--gray);
 }
 
-.form__output {
+.form__error {
 	margin: 0;
 	font-style: italic;
 	text-align: center;
 	color: var(--secondary-light-red);
 }
 
-.output--displayed ~ .form__button {
+.form__error ~ .form__button {
 	transform: translateY(2rem);
 }
 
@@ -106,7 +106,7 @@ html {
 .socials {
 	display: flex;
 	justify-content: space-between;
-	margin: 0 auto;
+	margin: 0 auto 1.5rem;
 	width: 150px;
 }
 
@@ -136,7 +136,7 @@ html {
 
 .socials__icon-container::before {
 	border: 1px solid var(--gray);
-	opacity: 1;
+	opacity: 0.2;
 }
 
 .socials__icon-container::after {
@@ -212,14 +212,13 @@ html {
 		flex-basis: 65%;
 	}
 
-	.form__output {
+	.form__error {
 		order: 1;
 		margin-left: 2rem;
 		margin-top: 0.5rem;
-
 	}
 
-	.output--displayed ~ .form__button {
+	.form__error ~ .form__button {
 		transform: translateY(0);
 	}
 
