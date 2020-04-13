@@ -1,12 +1,12 @@
 :root {
-	--primary-blue: hsl(223, 87%, 63%);
-	--primary-blue-hover: hsl(224, 87%, 70%);
+	--primary-accent-color: hsl(223, 87%, 63%);
+	--primary-accent-color-hover: hsl(224, 87%, 70%);
+	--secondary-accent-color: hsl(223, 100%, 88%);
 
-	--secondary-pale-blue: hsl(223, 100%, 88%);
-	--secondary-light-red: hsl(354, 100%, 66%);
+	--error-color: hsl(354, 100%, 66%);
 
-	--gray: hsl(0, 0%, 59%);
 	--default-font-color: hsl(209, 33%, 12%);
+	--gray-font-color: hsl(0, 0%, 59%);
 
 	--default-transition: 0.3s ease-in-out;
 }
@@ -62,20 +62,20 @@ html {
 .form__input {
 	margin: 0 0 0.5rem;
 	padding: 1rem 2rem;
-	border: 1px solid var(--gray);
+	border: 1px solid var(--gray-font-color);
 	border-radius: 50px;
 	transition: border-color var(--default-transition);
 }
 
 .form__input::placeholder {
-	color: var(--gray);
+	color: var(--gray-font-color);
 }
 
 .form__error {
 	margin: 0;
 	font-style: italic;
 	text-align: center;
-	color: var(--secondary-light-red);
+	color: var(--error-color);
 }
 
 .form__error ~ .form__button {
@@ -86,16 +86,16 @@ html {
 	padding: 1rem 2rem;
 	border: none;
 	border-radius: 50px;
-	background-color: var(--primary-blue);
+	background-color: var(--primary-accent-color);
 	font-weight: 600;
 	color: #fff;
-	box-shadow: 0 0.5rem 1rem -1rem var(--primary-blue);
+	box-shadow: 0 0.5rem 1rem -1rem var(--primary-accent-color);
 	transform: translateY(0);
 	transition: background-color var(--default-transition), transform var(--default-transition);
 }
 
 .form__button:hover {
-	background-color: var(--primary-blue-hover);
+	background-color: var(--primary-accent-color-hover);
 }
 
 .footer {
@@ -116,7 +116,7 @@ html {
 	width: 2rem;
 	height: 2rem;
 	border-radius: 50%;
-	color: var(--primary-blue);
+	color: var(--primary-accent-color);
 	font-size: 1.1em;
 	transition: color var(--default-transition);
 }
@@ -135,12 +135,12 @@ html {
 }
 
 .socials__icon-container::before {
-	border: 1px solid var(--gray);
-	opacity: 0.2;
+	border: 1px solid var(--secondary-accent-color);
+	opacity: 1;
 }
 
 .socials__icon-container::after {
-	background-color: var(--primary-blue);
+	background-color: var(--primary-accent-color);
 	opacity: 0;
 }
 
@@ -166,7 +166,7 @@ html {
 
 .copyright {
 	font-size: 0.6em;
-	color: var(--gray);
+	color: var(--gray-font-color);
 }
 
 .attribution {
@@ -179,11 +179,11 @@ html {
 
 .light-font {
 	font-weight: 300;
-	color: var(--gray);
+	color: var(--gray-font-color);
 }
 
 .invalid-input {
-	border-color: var(--secondary-light-red);
+	border-color: var(--error-color);
 }
 
 @media (min-width: 570px) {
